@@ -24,16 +24,19 @@ function convertFtoC(degreesFahrenheit) {
     return degreesCelsius;
 }
 
-function imageChange(float) {
+function imageChange(number) {
     let img = document.getElementById("weatherImage");
-    if (float > 50) {
+    if (number > 50) {
         img.src = "warm.png";
+        img.alt = "warm";
     }
-    else if (float >= 32) {
+    else if (number >= 32) {
         img.src = "cool.png";
+        img.alt = "cool";
     }
     else {
         img.src = "cold.png";
+        img.alt = "cold";
     }
 }
 
