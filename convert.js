@@ -1,5 +1,9 @@
 window.addEventListener("DOMContentLoaded", domLoaded);
 
+// global variables
+let celcuis;
+let farhenheit;
+
 // Functions
 function domLoaded() {
     celcuis = document.getElementById("cInput");
@@ -61,6 +65,5 @@ function convertHandler(event) {
             celcuis.value = c;
             imageChange(parseFloat(farhenheit.value));
         }
-        
     }
 }
