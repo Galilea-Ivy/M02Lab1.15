@@ -1,18 +1,23 @@
-// Global Variables
-let celcuis = document.getElementById("cInput");
-let farhenheit = document.getElementById("fInput");
-
-// Functions
 window.addEventListener("DOMContentLoaded", domLoaded);
 
-function convertCtoF(cel) {
-    let fahren = cel * (9/5) + 32;
-    return fahren;
+// Functions
+function domLoaded() {
+    celcuis = document.getElementById("cInput");
+    celcuis.addEventListener("keypress", clearFInput);
+    farhenheit = document.getElementById("fInput");
+    farhenheit.addEventListener("keypress", clearCInput);
+    let convertBtn = document.getElementById("convertButton");
+    convertBtn.addEventListener("click", convertHandler);
 }
 
-function convertFtoC(fahren) {
-    let cel = (fahren - 32) * (5/9);
-    return cel;
+function convertCtoF(degreesCelsius) {
+    let degreesFahrenheit = degreesCelsius * (9/5) + 32;
+    return degreesFahrenheit;
+}
+
+function convertFtoC(degreesFahrenheit) {
+    let degreesCelsius = (degreesFahrenheit - 32) * (5/9);
+    return degreesCelsius;
 }
 
 function imageChange(float) {
@@ -26,13 +31,6 @@ function imageChange(float) {
     else {
         img.src = "img/cold.png";
     }
-}
-
-function domLoaded() {
-    celcuis.addEventListener("keypress", clearFInput);
-    farhenheit.addEventListener("keypress", clearCInput);
-    let convertBtn = document.getElementById("convertButton");
-    convertBtn.addEventListener("click", convertHandler);
 }
 
 function clearCInput(event) {
