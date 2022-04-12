@@ -23,13 +23,13 @@ function convertFtoC(degreesFahrenheit) {
 function imageChange(float) {
     let img = document.getElementById("weatherImage");
     if (float > 50) {
-        img.src = "img/warm.png";
+        img.src = "warm.png";
     }
     else if (float >= 32) {
-        img.src = "img/cool.png";
+        img.src = "cool.png";
     }
     else {
-        img.src = "img/cold.png";
+        img.src = "cold.png";
     }
 }
 
