@@ -7,9 +7,9 @@ let farhenheit;
 // Functions
 function domLoaded() {
     celcuis = document.getElementById("cInput");
-    celcuis.addEventListener("keypress", clearFInput);
+    celcuis.addEventListener("keydown", clearFInput);
     farhenheit = document.getElementById("fInput");
-    farhenheit.addEventListener("keypress", clearCInput);
+    farhenheit.addEventListener("keydown", clearCInput);
     let convertBtn = document.getElementById("convertButton");
     convertBtn.addEventListener("click", convertHandler);
 }
